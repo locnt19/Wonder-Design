@@ -1,0 +1,49 @@
+.catalogue-product
+	padding: 70px 0
+	h2 
+		font-size: 35px
+		line-height: 55px
+		color: #333333
+		font-weight: 400
+		text-transform: uppercase
+	.product-item
+		margin-top: 30px
+		a 
+			transition: .5s all ease-in-out
+			text-decoration: none
+			display: block
+			.img 
+				overflow: hidden
+				margin-bottom: 20px
+				
+				img 
+					transition: .5s all ease-in-out
+					width: 100%
+			h3 
+				transition: .5s all ease-in-out
+				font-size: 18px
+				line-height: 26px
+				font-weight: 600
+				color: #333333
+			.download
+				margin-top: 20px
+				color: #8dc444
+				span 
+					font-size: 14px
+					line-height: 26px
+					margin-left: .5rem
+			&:hover 
+				.img 
+					img 
+						transform: scale(1.1)
+				h3 
+					color: #8dc444
+	@media (max-width: 768px)
+		padding: 30px 0
+		.product-item
+			margin: 15px 0
+			a 
+				.img 
+					margin-bottom: 10px
+				.download
+					margin-top: 10px
