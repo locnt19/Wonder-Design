@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- var title = 'project'
+	- var bodyClass = 'project-page'
+
+block main
+	include ../components/project/index
+	include ../components/pagination/index

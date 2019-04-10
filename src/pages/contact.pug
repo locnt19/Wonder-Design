@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'contact'
+	- var bodyClass = 'contact-page'
+
+block main
+	include ../components/contact/address/index
+	.container
+		hr
+	include ../components/contact/maps/index
