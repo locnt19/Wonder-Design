@@ -18,11 +18,7 @@ var productThumbnail = new Swiper('.product-image .thumbnail', {
 	slidesPerView: 4,
 	speed: 1200,
 	loop: true,
-	slideToClickedSlide: true,
-	autoplay: {
-		delay: 3500,
-		disableOnInteraction: false,
-	}
+	slideToClickedSlide: true
 })
 productThumbnail.on('click', function () {
 	var target = $('.product-image .thumbnail .swiper-slide-active').attr('data-target')
