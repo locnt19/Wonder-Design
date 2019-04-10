@@ -8,26 +8,6 @@ const FAQs = {
 	}
 };
 
-<<<<<<< HEAD
-$(document).ready(function () {
-	FAQs.toggleItem();
-	var lastedNews = new Swiper('.lasted-news .swiper-container', {
-		slidesPerView: 3,
-		loop: true,
-		speed: 1000,
-		spaceBetween: 30,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: 2,
-			},
-			512: {
-				slidesPerView: 1,
-			}
-=======
 const ProjectPhotoSwiper = new Swiper('.project-detail-photo .swiper-container', {
 	slidesPerView: 1,
 	speed: 2000,
@@ -59,12 +39,9 @@ const ProjectOtherSwiper = new Swiper('.project-detail-other .swiper-container',
 		},
 		576: {
 			slidesPerView: 1
->>>>>>> 3126f4018abdf8d57ef17e8f43b289f8c5e808e5
 		}
 	}
 });
-<<<<<<< HEAD
-=======
 
 var lastedNews = new Swiper('.lasted-news .swiper-container', {
 	slidesPerView: 3,
@@ -84,7 +61,6 @@ var lastedNews = new Swiper('.lasted-news .swiper-container', {
 $(document).ready(function () {
 	FAQs.toggleItem();
 });
->>>>>>> 3126f4018abdf8d57ef17e8f43b289f8c5e808e5
 
 
 // product-detail
@@ -113,8 +89,23 @@ $('.product-tab nav a').on('click', function (e) {
 	$('.product-tab .pcontent').not(target).hide()
 	var target = $(this).attr('href')
 	$(target).fadeIn()
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> 3126f4018abdf8d57ef17e8f43b289f8c5e808e5
+
+var lastedNews = new Swiper('.lasted-news .swiper-container', {
+	slidesPerView: 3,
+	loop: true,
+	speed: 1000,
+	spaceBetween: 30,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+		},
+		512: {
+			slidesPerView: 1,
+		}
+	}
+});
