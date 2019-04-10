@@ -3,21 +3,30 @@
 	@media (min-width: 768px)
 		padding-bottom: 75px
 	h1
-		padding-bottom: 10px
+		padding-bottom: 15px
+		line-height: 1
+		font-size: 36px
+		font-weight: 400
+		+tran(.2s)
+		@media (max-width: 992px)
+			font-size: 30px
+		@media (max-width: 768px)
+			font-size: 24px
+		@media (max-width: 576px)
+			font-size: 20px
 	.swiper-container
 		padding-top: 10px
 		padding-bottom: 10px
+		.swiper-slide
+			height: auto
 		.project-item
-			height: 100%
 			figure
-				height: 100%
 				.box-img
 					height: auto
 				figcaption
 					padding-bottom: 40px
-					h4
-						padding-bottom: 20px
 					p
+						padding-top: 20px
 						line-height: 1.467
 						-webkit-line-clamp: 3
 						-webkit-box-orient: vertical

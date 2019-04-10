@@ -10,12 +10,15 @@ const FAQs = {
 
 $(document).ready(function () {
 	FAQs.toggleItem();
-<<<<<<< HEAD
 	var lastedNews = new Swiper('.lasted-news .swiper-container', {
 		slidesPerView: 3,
 		loop: true,
 		speed: 1000,
-		spaceBetween: 20,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
@@ -25,8 +28,6 @@ $(document).ready(function () {
 			}
 		}
 	})
-});
-=======
 });
 
 
@@ -61,4 +62,3 @@ $('.product-tab nav a').on('click', function (e) {
 	var target = $(this).attr('href')
 	$(target).fadeIn()
 })
->>>>>>> 032c8a70fd9687febd783c62a0316f147bcf07f4
