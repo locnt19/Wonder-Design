@@ -1,0 +1,185 @@
+.our-service
+	background: #f5f5f5
+	padding-top: 65px
+	padding-bottom: 15px
+	.container
+		h2
+			font-family: 'Raleway', sans-serif
+			color: rgb(51, 51, 51)
+			font-size: 35px
+			text-transform: uppercase
+			line-height: 1.571
+			text-align: left
+			padding-bottom: 15px
+			font-weight: 400
+		.item
+			margin-bottom: 40px
+			@media (min-width: 992px)
+				margin-bottom: 0
+			figure
+				padding-bottom: 50px
+				height: 100%
+				background: #ffffff
+				margin: 0 15px
+				.box-img
+					overflow: hidden
+					img
+						width: 100%
+						transform: scale(1)
+						transition: .5s all ease-in-out
+				&:hover
+					.box-img
+						img
+							transform: scale(1.2)
+							transition: .5s all ease-in-out
+				figcaption
+					padding-left: 40px
+					padding-right: 40px
+					h3
+						font-size: 35px
+						font-family: 'Raleway', sans-serif
+						color: rgb(8, 117, 187)
+						font-weight: 700
+						line-height: 35px
+						padding-top: 35px
+						padding-bottom: 15px
+						position: relative
+						&:before
+							content: ""
+							display: inline-block
+							background-image: linear-gradient( 90deg, rgb(139,197,60) 0%, rgb(8,117,187) 100%)
+							width: 80px
+							height: 2px
+							position: absolute
+							left: 0
+							bottom: 0
+					span
+						display: inline-block
+						font-size: 20px
+						font-family: 'Raleway', sans-serif
+						color: rgb(153, 153, 153)
+						line-height: 20px
+						padding-top: 30px
+						padding-bottom: 20px
+					p
+						font-size: 15px
+						font-family: 'Raleway', sans-serif
+						color: rgb(51, 51, 51)
+						line-height: 1.467
+						padding-bottom: 40px
+					.btn
+						border: 1px solid rgb(204, 204, 204)
+						font-size: 15px
+						font-family: 'Raleway', sans-serif
+						color: rgb(153, 153, 153)
+						line-height: 15px
+						display: inline-flex
+						padding: 12px 65px
+						border-radius: 50px
+			@media (min-width: 768px)
+				flex: 0 0 50%
+				max-width: 50%
+	@media (min-width: 992px)
+		padding-bottom: 40px
+.service-detail
+	padding-top: 35px
+	padding-bottom: 40px
+	h2
+		font-size: 35px
+		font-family: 'Raleway', sans-serif
+		color: rgb(51, 51, 51)
+		font-weight: bold
+		line-height: 35px
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 10px
+		font-weight: 400
+	p
+		font-size: 18px
+		font-family: 'Raleway', sans-serif
+		color: rgb(153, 153, 153)
+		line-height: 1.444
+		text-align: center
+	.content, .content-reverse
+		.box-img
+			padding: 0 10px
+			img
+				width: 100%
+		.item
+			padding: 0 10px
+			padding-top: 35px
+
+			h3
+				font-size: 30px
+				font-family: 'Raleway', sans-serif
+				color: rgb(8, 117, 187)
+				font-weight: bold
+				line-height: 30px
+				padding-bottom: 15px
+				position: relative
+				&:before
+					content: ""
+					display: inline-block
+					background-image: linear-gradient( 90deg, rgb(139,197,60) 0%, rgb(8,117,187) 100%)
+					width: 80px
+					height: 2px
+					position: absolute
+					left: 0
+					bottom: 0
+			p
+				padding-top: 30px
+				padding-bottom: 30px
+				span
+					display: inline-block
+					font-size: 15px
+					font-family: 'Raleway', sans-serif
+					color: rgb(51, 51, 51)
+					line-height: 1.467
+					padding-bottom: 15px
+					text-align: justify
+					width: 100%
+	@media (min-width: 768px)
+		padding-top: 65px
+		padding-bottom: 85px
+		p
+			padding-bottom: 65px
+		.content
+			padding-bottom: 70px
+			.box-img
+				flex: 0 0 50%
+				max-width: 50%
+				padding-left: 45px
+			.item
+				padding-top: 0
+				flex: 0 0 50%
+				max-width: 50%
+				padding-right: 45px
+				padding-left: 20px
+				text-align: left
+				p
+					padding-bottom: 0
+					span
+						text-align: left
+		.content-reverse
+			padding-bottom: 70px
+			flex-direction: row-reverse
+			.box-img
+				flex: 0 0 50%
+				max-width: 50%
+				padding-right: 45px
+			.item
+				text-align: left
+				flex: 0 0 50%
+				max-width: 50%
+				padding-top: 0
+				padding-left: 45px
+				padding-right: 20px
+				p
+					padding-bottom: 0
+					span
+						text-align: left
+	@media (min-width: 992px)
+		.content
+			align-items: center
+		.content-reverse
+			align-items: center
