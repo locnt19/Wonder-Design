@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'catalogue'
+	- var bodyClass = 'catalogue-page'
+
+block main
+	include ../components/breadcrumb/index
+	include ../components/catalogue/catalogue-product/index
+	include ../components/pagination/index
+	
