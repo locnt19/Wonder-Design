@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- var title = 'career'
+	- var bodyClass = 'career-page'
+
+block main
+	include ../components/breadcrumb/index
+	include ../components/career/career-overview/index.pug

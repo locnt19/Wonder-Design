@@ -1,0 +1,61 @@
+.career-overview 
+	padding: 70px 0
+	.overview-item 
+		display: flex
+		align-items: center
+		.img 
+			img 
+				width: 100%
+		.full-content 
+			h2 
+				font-size: 35px
+				line-height: 55px
+				color: #0875bb
+				font-weight: 600
+				position: relative
+				&:before 
+					position: absolute
+					content: ''
+					bottom: -3px
+					background-image: linear-gradient( 0deg, rgb(139,197,60) 0%, rgb(8,117,187) 100%)
+					width: 80px
+					height: 2px
+			h3 
+				font-size: 20px
+				line-height: 30px
+				font-weight: 600
+				color: #999999
+				span 
+					font-weight: 300
+			p 
+				font-size: 15px
+				line-height: 22px
+				color: #333333
+			.develope
+				.item 
+					display: flex
+					align-items: center
+					h4 
+						font-size: 15px
+						line-height: 30px
+						color: #666666
+						font-weight: 400
+						margin-left: 0.5rem
+	@media (max-width: 992px)
+		.overview-item 
+			+ .overview-item 
+				margin-top: 15px
+	@media (max-width: 767.98px)
+		padding: 30px 0
+.career-table 
+	padding-bottom: 70px
+	h2 
+		font-size: 35px
+		line-height: 55px
+		color: #333333
+		text-transform: uppercase
+		font-weight: 400
+	table 
+		
+	@media (max-width: 767.98px)
+		padding-bottom: 30px
