@@ -14,13 +14,24 @@
 			font-weight: 400
 		.item
 			margin-bottom: 40px
+			@media (min-width: 992px)
+				margin-bottom: 0
 			figure
 				padding-bottom: 50px
 				height: 100%
 				background: #ffffff
 				margin: 0 15px
-				img
-					width: 100%
+				.box-img
+					overflow: hidden
+					img
+						width: 100%
+						transform: scale(1)
+						transition: .5s all ease-in-out
+				&:hover
+					.box-img
+						img
+							transform: scale(1.2)
+							transition: .5s all ease-in-out
 				figcaption
 					padding-left: 40px
 					padding-right: 40px
@@ -68,6 +79,8 @@
 			@media (min-width: 768px)
 				flex: 0 0 50%
 				max-width: 50%
+	@media (min-width: 992px)
+		padding-bottom: 40px
 .service-detail
 	padding-top: 35px
 	padding-bottom: 40px
