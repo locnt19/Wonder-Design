@@ -1,36 +1,108 @@
 .product-detail
 	padding: 70px 0
-	.product-image
-		padding: 0 10px
-		.big
-			margin-bottom: 15px
-			.slide
-				display: none
-		.thumbnail
-			margin: 0 auto
-			.swiper-slide
-				padding: 0 10px
-				cursor: pointer
-				img
-					transition: all .5s ease-out
-					border: 1px solid transparent
-			.swiper-slide-active
-				img
-					border: 1px solid rgba(0, 0, 0, 0.1)
-	.product-info 
-		h2 
-			font-size: 30px
-			line-height: 55px
-			color: #0875bb
-			text-transform: uppercase
-			font-weight: 600
-		p 
-			font-size: 14px
-			line-height: 55px
-			color: #999999
+	.product-detail-item
+		+ .product-detail-item
+			padding-top: 20px
+		.product-image
+			padding: 0 10px
+			.big
+				text-align: center
+				margin-bottom: 15px
+				.slide
+					display: none
+			.thumbnail
+				margin: 0 auto
+				.swiper-slide
+					padding: 0 10px
+					cursor: pointer
+					img
+						transition: all .5s ease-out
+						border: 1px solid transparent
+				.swiper-slide-active
+					img
+						border: 1px solid rgba(0, 0, 0, 0.1)
+		.product-info 
+			h2 
+				font-size: 30px
+				line-height: 55px
+				color: #0875bb
+				text-transform: uppercase
+				font-weight: 600
+			p 
+				font-size: 14px
+				line-height: 55px
+				color: #999999
+				a 
+					color: #8dc444
+			h4 
+				font-size: 25px
+				color: #be0707
+				font-weight: 400
+		.product-tab 
+			padding: 40px 0
+			.td
+				+ .td 
+					margin-top: 10px
+				nav 
+					border-bottom: 1px solid #d7d7d7
+					a 
+						font-size: 16px
+						font-weight: 400
+						color: #999999
+						text-transform: uppercase
+						+ a 
+							margin-left: 20px
+						&.active 
+							font-weight: 600
+							color: #333333
+							border-bottom: 2px solid #000
+		.button 
+			border-width: 1px
+			border-color: rgb(8, 117, 187)
+			border-style: solid
+			width: 252px
+			border-radius: 50px
+			height: 48px
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: .5s all ease-in-out
 			a 
-				color: #8dc444
-		h4 
-			font-size: 25px
-			color: #be0707
-			font-weight: 400
+				transition: .5s all ease-in-out
+				font-size: 15px
+				line-height: 22px
+				font-weight: 600
+				color: #0875bb
+				text-transform: uppercase
+			&:hover 
+				background: #0875bb
+				a 
+					color: #ffffff
+	@media (max-width: 768px)
+		padding: 30px 0
+		.product-detail-item
+			.product-tab 
+				padding: 20px 0
+.tables 
+	h2 
+		font-size: 35px
+		line-height: 55px
+		font-weight: 400
+		color: #333333
+		text-transform: uppercase
+	.container 
+		padding-top: 70px
+		border-top: 1px solid #d7d7d7
+	@media (max-width: 768px)
+		.container 
+			padding-top: 30px
+.other 
+	padding: 70px 0 
+	h2 
+		font-size: 35px
+		line-height: 55px
+		font-weight: 400
+		color: #333333
+		text-transform: uppercase
+	@media (max-width: 768px)
+		padding: 30px
