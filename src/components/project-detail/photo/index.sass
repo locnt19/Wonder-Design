@@ -1,0 +1,39 @@
+.project-detail-photo
+	padding: 0 0 60px
+	+tran(.2s)
+	@media (max-width: 992px)
+		padding:  0 0 50px
+	@media (max-width: 768px)
+		padding:  0 0 40px
+	@media (max-width: 576px)
+		padding:  0 0 30px
+	.title
+		width: 100%
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+		@media (max-width: 768px)
+			margin-bottom: 15px
+		@media (max-width: 576px)
+			margin-bottom: 10px
+	.slide-navigation
+		margin-left: auto
+		font-size: 25px
+		@media (max-width: 992px)
+			font-size: 23px
+		@media (max-width: 768px)
+			font-size: 21px
+		@media (max-width: 576px)
+			font-size: 19px
+		i
+			+tran(.2s)
+			color: #999
+			&:hover
+				color: #0875bb
+	h2
+		font-size: 20px
+		line-height: 1
+		@media (max-width: 768px)
+			font-size: 18px
+		@media (max-width: 576px)
+			font-size: 16px
