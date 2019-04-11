@@ -141,12 +141,18 @@ footer
 		justify-content: center
 		@media (min-width: 576px)
 			justify-content: flex-start
-	i
-		font-style: normal
-		font-size: 18px
-		padding-right: 10px
-		color: #cce0b1
-	span
+	nav
+		a
+			border: none
+			padding: 0
+			&:hover
+				border: none
+			i
+				font-style: normal
+				font-size: 18px
+				padding-right: 10px
+				color: #cce0b1
+	a
 		font-size: 12px
 		color: rgb(255, 255, 255)
 		line-height: 1
@@ -161,16 +167,20 @@ footer
 		line-height: 1.538
 		text-align: center
 	@media (min-width: 768px)
-		i
-			font-size: 16px
+		nav
+			a
+				i
+					font-size: 16px
 		p
 			text-align: left
 			font-size: 10px
 		span
 			font-size: 10px
 	@media (min-width: 992px)
-		i
-			font-size: 22px
+		nav
+			a
+				i
+					font-size: 22px
 		p
 			font-size: 12px
 		span
