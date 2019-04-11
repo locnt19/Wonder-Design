@@ -8,6 +8,93 @@ const FAQs = {
 	}
 };
 
+const Header = {
+	toggleSearchBox: function () {
+		let searchIcon = $('.search-wrapper i')
+		let searchBox = $('.search-box')
+		searchIcon.on('click', function () {
+			searchBox.toggleClass('active')
+		})
+	},
+	toggleMenu: function () {
+		let toggleMenu = $('header .toggle-menu')
+		let menuParent = $('header .menu-parent')
+		toggleMenu.on('click', function () {
+			toggleMenu.toggleClass('open')
+			menuParent.toggleClass('active')
+		})
+	},
+	toggleMenuSub: function () {
+		let toggleMenuSub = $('ul.menu-parent li')
+		let menuSub = $('header .menu-sub')
+		toggleMenu.on('click', function () {
+			toggleMenuSub.toggleClass('open')
+			menuSub.toggleClass('active')
+		})
+	},
+	moveContactInfo: function () {
+		let moveContactInfo = new MappingListener({
+			selector: 'header .contact-info',
+			mobileWrapper: '.mobile-header',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.top-header-menu',
+			desktopMethod: 'prependTo',
+			breakpoint: 992,
+		}).watch()
+	},
+	moveMainMenu: function () {
+		let moveMainMenu = new MappingListener({
+			selector: 'header .menu-parent',
+			mobileWrapper: '.mobile-header',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.main-header-wrapper',
+			desktopMethod: 'prependTo',
+			breakpoint: 992,
+		}).watch()
+	},
+	moveToggleMenu: function () {
+		let moveToggleMenu = new MappingListener({
+			selector: 'header .toggle-menu',
+			mobileWrapper: '.mobile-header',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.main-header-wrapper',
+			desktopMethod: 'prependTo',
+			breakpoint: 992,
+		}).watch()
+	},
+	moveLanguageBox: function () {
+		let moveLanguageBox = new MappingListener({
+			selector: 'header .language',
+			mobileWrapper: '.menu-parent',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.top-header-menu',
+			desktopMethod: 'appendTo',
+			breakpoint: 992,
+		}).watch()
+	},
+	moveLogo: function () {
+		let moveLogo = new MappingListener({
+			selector: 'header .logo-wrapprer',
+			mobileWrapper: '.mobile-header',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.main-header-wrapper',
+			desktopMethod: 'prependTo',
+			breakpoint: 992,
+		}).watch()
+	},
+	moveSearchBox: function () {
+		let moveSearchBox = new MappingListener({
+			selector: 'header .search-box',
+			mobileWrapper: '.menu-parent',
+			mobileMethod: 'appendTo',
+			desktopWrapper: '.search-wrapper',
+			desktopMethod: 'prependTo',
+			breakpoint: 992,
+		}).watch()
+	}
+}
+
+
 const ProjectPhotoSwiper = new Swiper('.project-detail-photo .swiper-container', {
 	slidesPerView: 1,
 	speed: 2000,
@@ -45,6 +132,16 @@ const ProjectOtherSwiper = new Swiper('.project-detail-other .swiper-container',
 
 $(document).ready(function () {
 	FAQs.toggleItem();
+	Header.toggleSearchBox();
+	Header.moveContactInfo();
+	Header.moveLanguageBox();
+	Header.moveLogo();
+	Header.moveToggleMenu();
+	Header.moveMainMenu();
+	Header.moveSearchBox();
+	Header.toggleMenu();
+	// Header.toggleMenuSub();
+
 });
 
 

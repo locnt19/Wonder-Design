@@ -1,0 +1,52 @@
+.career-detail-page
+	.form-wrapper
+		margin-top: 50px
+		@media (max-width: 992px)
+			margin-top: 40px
+		@media (max-width: 768px)
+			margin: 30px 0
+		@media (max-width: 576px)
+			margin: 20px 0
+		button
+			padding: 13px 50px
+			margin-bottom: 10px
+			+ button
+				margin-left: 20px
+				@media (max-width: 992px)
+					margin-left: 0
+			@media (max-width: 992px)
+				display: block
+				padding: 12px 40px
+			@media (max-width: 768px)
+				padding: 11px 35px
+			@media (max-width: 576px)
+				padding: 10px 30px
+		.apply
+			color: #f5f5f5
+			background: #0875bb
+		.download
+			color: #8AC043
+			border-color: #8AC043
+			&:hover
+				color: #8AC043
+				background: #f5f5f5
+				border-color: #8AC043
+	.project-detail-info
+		a
+			color: #0875bb
+			text-decoration: underline !important
+		b
+			display: inline-block
+			font-size: 18px
+			margin-bottom: 10px
+		ul
+			list-style-type: none
+			padding: 0
+		li
+			margin-bottom: 10px
+			&:before
+				content: '-'
+				margin-right: 7px
+	.project-detail-sidebar
+		li
+			margin-bottom: 0

@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'career-detail'
+	- var bodyClass = 'career-detail-page'
+
+block main
+	include ../components/career-detail/info/index
+	.container
+		hr
+	include ../components/career-detail/other/index

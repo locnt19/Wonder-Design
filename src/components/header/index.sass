@@ -1,0 +1,389 @@
+.top-header
+	background: #0875bb
+	padding: 0
+
+.top-header-wrapper
+	display: flex
+	align-items: center
+	color: #fff
+
+	.container
+		display: flex
+
+.top-header-menu
+	margin-left: auto
+	display: flex
+	align-items: center
+
+.contact-info
+	list-style: none
+	display: flex
+
+	@media (max-width: 992px)
+		flex-flow: wrap
+		flex: 0 0 100%
+		justify-content: center
+		padding: 9px 0
+		background: #0875bb
+
+	a
+		color: #fff
+
+	li
+		position: relative
+		padding: 0 20px
+
+		&:not(:last-child)
+			&:after
+				content: ""
+				display: block
+				width: 1px
+				height: 100%
+				background: #5ab7f3
+				position: absolute
+				top: 0
+				right: 0
+
+		&:nth-child(1)
+			&:after
+				@media (max-width: 352px)
+					display: none
+
+			a
+				font-weight: 700
+
+				&:before
+					color: #8dc444
+					margin-right: 5px
+
+					+mtrl("")
+
+					@media (max-width: 576px)
+						content: ""
+
+		&:nth-child(2)
+			&:after
+				@media (max-width: 500px)
+					display: none
+
+			a
+				&:before
+					color: #8dc444
+					margin-right: 5px
+
+					+mtrl("")
+
+					@media (max-width: 576px)
+						content: ""
+
+.language
+	background: #055A91
+	display: inline-flex
+	align-items: center
+	padding: 5px 10px
+
+	@media (max-width: 992px)
+		margin-left: 15px
+		background: transparent
+
+	.box-img
+		width: 30px
+		height: 30px
+		margin-right: 10px
+		overflow: hidden
+		border: 2px solid rgba(255, 255, 255, 0.5)
+		border-radius: 99px
+
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+	//==================== custom select ====================
+	select
+		background: #055A91
+		border: none
+		outline: none
+		color: #fff
+
+		@media (max-width: 992px)
+			background: transparent
+			color: #055A91
+
+.main-header
+	padding: 0
+	background: #fff
+
+.logo-wrapprer
+	z-index: 99
+	width: 160px
+	border: none
+	border-radius: 50% 50% 0 0
+	overflow: hidden
+	background: #fff
+	position: relative
+	margin-top: -40px
+
+	@media (max-width: 992px)
+		margin-top: 0
+		width: 140px
+
+	@media (max-width: 768px)
+		width: 120px
+
+	@media (max-width: 576px)
+		width: 100px
+
+	img
+		display: block
+		margin: 0 auto
+
+.main-header-wrapper
+	display: flex
+	align-items: center
+
+.mobile-header
+	background: #fff
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+
+	.logo-wrapprer
+		padding: 15px 0
+		margin-left: 15px
+
+	.toggle-menu
+		width: 30px
+		height: 22.5px
+		position: relative
+		transform: rotate(0deg)
+		transition: 0.5s ease-in-out
+		cursor: pointer
+		margin-right: 15px
+
+		span
+			display: block
+			position: absolute
+			height: 3px
+			width: 100%
+			background: #0875BB
+			border-radius: 9px
+			opacity: 1
+			left: 0
+			transform: rotate(0deg)
+			transition: 0.25s ease-in-out
+
+			&:nth-child(1)
+				top: 0px
+				transform-origin: left center
+
+			&:nth-child(2)
+				top: 9px
+				transform-origin: left center
+
+			&:nth-child(3)
+				top: 18px
+				transform-origin: left center
+
+		&.open
+			span
+				&:nth-child(1)
+					transform: rotate(45deg)
+					top: 0px
+					left: 8px
+
+				&:nth-child(2)
+					opacity: 0
+					width: 0
+
+				&:nth-child(3)
+					transform: rotate(-45deg)
+					top: 21.5px
+					left: 8px
+
+.main-header-menu
+	display: flex
+	align-items: center
+	margin-left: auto
+
+ul.menu-parent
+	padding: 0
+	display: flex
+	list-style: none
+
+	> li
+		position: relative
+
+		&:hover
+			.menu-sub
+				display: block
+
+			> a
+				color: #0875BB
+				box-shadow: 0 1px 0 0 #0875BB
+
+				@media (max-width: 992px)
+					box-shadow: none
+
+					&:after
+						content: ""
+						display: block
+						width: 100%
+						height: 2px
+						background-image: linear-gradient(90deg, #0875bb 0, #8dc444)
+
+		@media (min-width: 992px)
+			padding: 0 20px
+
+	@media (max-width: 992px)
+		display: block
+		background: #0875BB
+		position: absolute
+		top: 167px
+		right: -100%
+		z-index: 99
+		width: 100%
+		transition: all 0.5s
+
+		&.active
+			right: 0
+
+		> li
+			color: #fff
+			margin: 10px 20px
+			padding: 0
+			&:hover
+				a
+					color: #8dc444
+
+			.menu-sub
+				display: block
+
+	@media (max-width: 768px)
+		top: 152px
+
+	@media (max-width: 576px)
+		top: 134px
+
+	@media (max-width: 500px)
+		top: 156px
+
+	@media (max-width: 353px)
+		top: 174px
+
+ul.menu-sub
+	display: none
+	padding: 0
+	list-style: none
+
+	li
+		margin: 10px 20px
+
+	@media (min-width: 992px)
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translateX(-50%)
+		background: #fff
+		padding: 30px 20px
+		margin-top: 10px
+		z-index: 99
+		width: 250px
+
+		&:before
+			content: ""
+			position: absolute
+			bottom: 100%
+			left: 50%
+			transform: translateX(-50%)
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 10px 10px 10px
+			border-color: transparent transparent #fff transparent
+
+		&:hover
+			+box-shadow
+
+		a
+			white-space: nowrap
+
+		li
+			position: relative
+			margin-bottom: 10px
+
+			&:hover
+				&:after
+					position: absolute
+					content: ""
+					display: block
+					width: 100%
+					height: 2px
+					background-image: linear-gradient(90deg, #0875bb 0, #8dc444)
+
+				a
+					color: #0875BB
+					font-weight: 700
+
+.search-wrapper
+	position: relative
+
+	.mdi-magnify
+		font-size: 20px
+		color: #8dc444
+		cursor: pointer
+
+		@media (max-width: 992px)
+			display: none
+
+.search-box
+	display: flex
+	border: 1px solid #e1e1e1
+	border-radius: 99px
+	background: #ffffff
+	overflow: hidden
+	padding: 1px
+	visibility: hidden
+	opacity: 0
+
+	+tran(0.2s)
+
+	input
+		padding: 0 10px
+		border: none
+		outline: none
+
+		@media (max-width: 992px)
+			width: 100%
+
+		&::placeholder
+			font-size: 13px
+
+	button
+		flex: 0 0 30px
+		width: 30px
+		height: 30px
+		border-radius: 99px
+		background: #0875BB
+		border: none
+		outline: none
+
+		span
+			color: #fff !important
+
+	@media (min-width: 992px)
+		position: absolute
+		right: 0
+		top: 150%
+
+	@media (max-width: 992px)
+		visibility: visible
+		opacity: 1
+		margin: 10px 20px
+
+	&.active
+		visibility: visible
+		opacity: 1
+
+		+box-shadow
