@@ -34,10 +34,14 @@ $(document).ready(function () {
 			let toggleMenu = $('header .toggle-menu')
 			let menuParent = $('header .menu-parent')
 			let contactinfo = $('header .contact-info')
+			let backdrop = $('header .backdrop')
+			let overflowHidden = $('html')
 			toggleMenu.on('click', function () {
 				toggleMenu.toggleClass('open')
 				menuParent.toggleClass('active')
 				contactinfo.toggleClass('active')
+				backdrop.toggleClass('active')
+				overflowHidden.toggleClass('active')
 			})
 		},
 		moveContactInfo: function () {

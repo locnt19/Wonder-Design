@@ -11,6 +11,21 @@ header
 		top: 0
 		left: 0
 		position: fixed
+	.backdrop
+		display: none
+	@media (max-width: 991.9px)
+		.backdrop
+			z-index: 99
+			display: none
+			position: fixed
+			top: 73px
+			right: 0
+			width: 0
+			height: 100%
+			background: rgba(0,0,0,.8)
+			&.active
+				width: 100%
+				display: block
 .top-header
 	background: #0875bb
 	padding: 0
