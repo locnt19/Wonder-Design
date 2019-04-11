@@ -143,6 +143,11 @@
 				figure
 					height: 100%
 					background: #ffffff
+					&:hover
+						figcaption
+							h3
+								color: #0875bb
+								+tran(.5s)
 					.box-img
 						overflow: hidden
 						img
@@ -172,6 +177,7 @@
 							color: rgb(51, 51, 51)
 							line-height: 1.444
 							padding-bottom: 15px
+							+tran(.5s)
 							@media (min-width: 768px)
 								font-size: 18px
 						p
@@ -198,27 +204,33 @@
 	padding-top: 35px
 	.container
 		h2
-			font-size: 30px
+			font-size: 26px
 			font-family: 'Raleway', sans-serif
 			color: rgb(8, 117, 187)
 			font-weight: bold
 			line-height: 1.333
+			@media (min-width: 768px)
+				font-size: 30px
 		date
 			display: inline-block
 			padding-bottom: 20px
-			font-size: 14px
+			font-size: 12px
 			color: rgb(153, 153, 153)
 			font-family: 'Raleway', sans-serif
 			line-height: 1.857
 			font-weight: 400
+			@media (min-width: 768px)
+				font-size: 14px
 		span
 			display: inline-block
-			font-size: 18px
+			font-size: 14px
 			font-family: 'Raleway', sans-serif
 			font-weight: 400
 			color: rgb(153, 153, 153)
 			line-height: 1.444
 			padding-bottom: 10px
+			@media (min-width: 768px)
+				font-size: 18px
 		p
 			padding-top: 15px
 			padding-bottom: 15px

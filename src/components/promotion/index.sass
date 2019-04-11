@@ -20,28 +20,46 @@
 		.col
 			padding-top: 15px
 			padding-bottom: 15px
-			figure
-				height: 100%
-				background: #ffffff
-				img
-					width: 100%
-				figcaption
-					padding-left: 20px
-					padding-right: 20px
-					padding-bottom: 50px
-					padding-top: 20px
-					date
-						display: inline-block
-						padding-bottom: 10px
-						font-size: 14px
-						font-family: 'Raleway', sans-serif
-						color: rgb(153, 153, 153)
-						line-height: 1.857
-					h3
-						font-size: 18px
-						color: rgb(51, 51, 51)
-						font-family: 'Raleway', sans-serif
-						line-height: 1.444
+			.project-item
+				
+				figure
+					height: 100%
+					background: #ffffff
+					&:hover
+						box-shadow: 0 0 15px 0 rgba(0,0,0,.2)
+						figcaption
+							h3
+								color: #0875bb
+								+tran(.5s)
+						.box-img
+							+tran(.5s)
+					.box-img
+						+tran(.5s)
+						height: auto
+						img
+							width: 100%
+					figcaption
+						padding-left: 20px
+						padding-right: 20px
+						padding-bottom: 50px
+						padding-top: 20px
+						date
+							display: inline-block
+							padding-bottom: 10px
+							font-size: 12px
+							font-family: 'Raleway', sans-serif
+							color: rgb(153, 153, 153)
+							line-height: 1.857
+							@media (min-width: 768px)
+								font-size: 14px
+						h3
+							font-size: 16px
+							color: rgb(51, 51, 51)
+							font-family: 'Raleway', sans-serif
+							line-height: 1.444
+							+tran(.5s)
+							@media (min-width: 768px)
+								font-size: 18px
 	@media (min-width: 576px)
 		padding-bottom: 25px
 		.row

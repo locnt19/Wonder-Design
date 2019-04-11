@@ -27,6 +27,13 @@
 				height: 100%
 				background: #ffffff
 				margin: 0 15px
+				&:hover
+					box-shadow: 0 0 15px 0 rgba(0,0,0,.2)
+					figcaption
+						p
+							color: #0875bb
+							+tran(.5s)
+							font-weight: bold
 				.box-img
 					overflow: hidden
 					img
@@ -39,8 +46,12 @@
 							transform: scale(1.2)
 							transition: .5s all ease-in-out
 				figcaption
-					padding-left: 40px
-					padding-right: 40px
+					padding-left: 15px
+					padding-right: 15px
+					text-align: left
+					@media (min-width: 992px)
+						padding-left: 40px
+						padding-right: 40px
 					h3
 						font-size: 35px
 						font-family: 'Raleway', sans-serif
@@ -50,6 +61,7 @@
 						padding-top: 35px
 						padding-bottom: 15px
 						position: relative
+						text-align: left
 						&:before
 							content: ""
 							display: inline-block
@@ -60,19 +72,29 @@
 							left: 0
 							bottom: 0
 					span
+						text-align: left
 						display: inline-block
 						font-size: 20px
 						font-family: 'Raleway', sans-serif
 						color: rgb(153, 153, 153)
 						line-height: 20px
 						padding-top: 30px
+						width: 100%
 						padding-bottom: 20px
 					p
+						text-align: left
 						font-size: 15px
+						font-weight: 400
 						font-family: 'Raleway', sans-serif
 						color: rgb(51, 51, 51)
 						line-height: 1.467
-						padding-bottom: 40px
+						margin-bottom: 40px
+						+tran(.5s)
+						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
+						display: -webkit-box
+						overflow: hidden
+						text-overflow: ellipsis
 					.btn
 						border: 1px solid rgb(204, 204, 204)
 						font-size: 15px
@@ -82,6 +104,10 @@
 						display: inline-flex
 						padding: 12px 65px
 						border-radius: 50px
+						&:hover
+							background: #0875bb
+							color: #ffffff
+							+tran(.2s)
 			@media (min-width: 768px)
 				flex: 0 0 50%
 				max-width: 50%
