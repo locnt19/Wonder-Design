@@ -1,3 +1,5 @@
+header
+	background: #ffffff
 .top-header
 	background: #0875bb
 	padding: 0
@@ -18,16 +20,42 @@
 .contact-info
 	list-style: none
 	display: flex
+	font-size: 14px
+	position: absolute
+	left: 40%
+	transform: translateX(-50%)
+	width: 100%
+	background: #ffffff
+	justify-content: flex-end
+	@media (min-width: 768px)
+		position: absolute
+		left: 40%
+		transform: translateX(-50%)
+		width: 100%
+		background: #ffffff
+		justify-content: flex-end
+	@media (min-width: 992px)
+		justify-content: center
+		transform: translateX(0)
+		width: auto
+		font-size: 13px
+		position: inherit
+		background: #0875bb
+	@media (min-width: 1200px)
+		font-size: 14px
 
 	@media (max-width: 992px)
 		flex-flow: wrap
 		flex: 0 0 100%
-		justify-content: center
 		padding: 9px 0
-		background: #0875bb
+		background: #fff
 
 	a
 		color: #fff
+		@media (min-width: 768px)
+			color: #0875bb
+		@media (min-width: 992px)
+			color: #fff
 
 	li
 		position: relative
@@ -105,6 +133,11 @@
 		border: none
 		outline: none
 		color: #fff
+		font-size: 14px
+		@media (min-width: 992px)
+			font-size: 13px
+		@media (min-width: 1200px)
+			font-size: 14px
 
 		@media (max-width: 992px)
 			background: transparent
@@ -113,34 +146,49 @@
 .main-header
 	padding: 0
 	background: #fff
-
-.logo-wrapprer
-	z-index: 99
-	width: 160px
-	border: none
-	border-radius: 50% 50% 0 0
-	overflow: hidden
-	background: #fff
-	position: relative
-	margin-top: -40px
-
-	@media (max-width: 992px)
-		margin-top: 0
-		width: 140px
-
-	@media (max-width: 768px)
-		width: 120px
-
-	@media (max-width: 576px)
-		width: 100px
-
-	img
-		display: block
-		margin: 0 auto
+	height: 80px
+	display: none
+	align-items: center
+	@media (min-width: 992px)
+		display: flex
+		height: 60px
+	@media (min-width: 1200px)
+		height: 80px
 
 .main-header-wrapper
 	display: flex
 	align-items: center
+.logo-wrapper
+	margin-right: auto
+	z-index: 99
+	width: 160px
+	border: none
+	border-radius: 50% 50% 0 0
+	overflow: auto
+	background: #fff
+	position: relative
+	margin-top: -40px
+	padding: 10px
+	@media (min-width: 768px)
+		margin-top: 0
+		padding: 0
+		width: 100px
+	@media (min-width: 992px)
+		overflow: hidden
+		padding: 10px 0
+		margin-left: 0
+		width: 135px
+		margin-top: -40px
+	@media (min-width: 1200px)
+		width: 160px
+		padding: 15px 0
+
+	img
+		display: block
+		margin: 0 auto
+		@media (min-width: 768px)
+		@media (min-width: 992px)
+			width: 80%
 
 .mobile-header
 	background: #fff
@@ -148,10 +196,12 @@
 	flex-wrap: wrap
 	align-items: center
 	justify-content: space-between
+	@media (min-width: 768px)
+		height: 70px
+		overflow: hidden
+	@media (min-width: 992px)
+		display: none
 
-	.logo-wrapper
-		padding: 15px 0
-		margin-left: 15px
 
 	.toggle-menu
 		width: 30px
@@ -161,7 +211,11 @@
 		transition: 0.5s ease-in-out
 		cursor: pointer
 		margin-right: 15px
-
+		@media (min-width: 768px)
+			position: absolute
+			right: 0
+		@media (min-width: 992px)
+			position: inherit
 		span
 			display: block
 			position: absolute
@@ -205,7 +259,6 @@
 .main-header-menu
 	display: flex
 	align-items: center
-	margin-left: auto
 
 ul.menu-parent
 	padding: 0
@@ -214,14 +267,27 @@ ul.menu-parent
 
 	> li
 		position: relative
+		&:hover
+			ul.menu-sub
+				+box-shadow
+
+		> a
+			font-size: 15px
+			font-weight: 400
+			color: rgb(51, 51, 51)
+			line-height: 1
+			@media (min-width: 992px)
+				font-size: 13px
+			@media (min-width: 1200px)
+				font-size: 15px
 
 		&:hover
 			.menu-sub
 				display: block
 
 			> a
-				color: #0875BB
-				box-shadow: 0 1px 0 0 #0875BB
+				color: #0875bb
+				box-shadow: 0 1px 0 0 rgb(8, 117, 187)
 
 				@media (max-width: 992px)
 					box-shadow: none
@@ -240,10 +306,10 @@ ul.menu-parent
 		display: block
 		background: #0875BB
 		position: absolute
-		top: 167px
+		top: 70px
 		right: -100%
 		z-index: 99
-		width: 100%
+		width: 320px
 		transition: all 0.5s
 
 		&.active
@@ -276,6 +342,7 @@ ul.menu-sub
 	display: none
 	padding: 0
 	list-style: none
+	+tran(.5s)
 
 	li
 		margin: 10px 20px
@@ -286,10 +353,10 @@ ul.menu-sub
 		left: 50%
 		transform: translateX(-50%)
 		background: #fff
-		padding: 30px 20px
+		padding: 30px 10px
 		margin-top: 10px
 		z-index: 99
-		width: 250px
+		width: 200px
 
 		&:before
 			content: ""
@@ -303,8 +370,6 @@ ul.menu-sub
 			border-width: 0 10px 10px 10px
 			border-color: transparent transparent #fff transparent
 
-		&:hover
-			+box-shadow
 
 		a
 			white-space: nowrap
@@ -387,3 +452,5 @@ ul.menu-sub
 		opacity: 1
 
 		+box-shadow
+.backdrop
+		display: none

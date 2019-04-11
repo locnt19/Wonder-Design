@@ -1,62 +1,64 @@
-//- header
-//- 	section.top-header
-//- 		.top-header-wrapper
-//- 			.container
-//- 				.top-header-menu
-//- 					ul.contact-info
-//- 						li
-//- 							a(href="tel:65 6240 6830") +65 6240 6830
-//- 						li
-//- 							a(href="mailto:support@singwonder.com") support@singwonder.com
-//- 						li
-//- 							a(href="javascript:void(0)") Customer Service
-//- 					.language
-//- 						.box-img
-//- 							img(src="./img/flag.png", alt="flag")
-//- 						select
-//- 							option English
-//- 							option Vietnamese
-//- 	section.main-header
-//- 		.container
-//- 			.main-header-wrapper
-//- 				.logo-wrapper
-//- 					img(src="./img/logo.png", alt="logo")
-//- 				.main-header-menu
-//- 					ul.menu-parent
-//- 						li
-//- 							a(href="javascript:void(0)") About Us
-//- 						li
-//- 							a(href="javascript:void(0)") Service
-//- 						li
-//- 							a(href="javascript:void(0)") Product
-//- 							ul.menu-sub
-//- 								li
-//- 									a(href="javascript:void(0)") Lights
-//- 								li
-//- 									a(href="javascript:void(0)") Electrical
-//- 								li
-//- 									a(href="javascript:void(0)") Wooden Furniture
-//- 								li
-//- 									a(href="javascript:void(0)") Decor
-//- 						li
-//- 							a(href="javascript:void(0)") Promotion
-//- 						li
-//- 							a(href="javascript:void(0)") Project
-//- 						li
-//- 							a(href="javascript:void(0)") Catalogue
-//- 						li
-//- 							a(href="javascript:void(0)") Career
-//- 						li
-//- 							a(href="javascript:void(0)") Contact Us
-//- 					.search-wrapper
-//- 						i.mdi.mdi-magnify
-//- 						.search-box
-//- 							input(type="text", placeholder="Tìm kiếm thông tin")
-//- 							button
-//- 								span.mdi.mdi-magnify
-
-//- 	.mobile-header
-//- 		.toggle-menu
-//- 			span
-//- 			span
-//- 			span
+header
+	section.top-header
+		.top-header-wrapper
+			.container
+				.top-header-menu
+					ul.navbar-top-list.contact-info
+						li
+							a(href="tel:65 6240 6830") +65 6240 6830
+						li
+							a(href="mailto:support@singwonder.com") support@singwonder.com
+						li
+							a(href="javascript:void(0)") Customer Service
+					.language
+						.box-img
+							img(src="./img/flag.png", alt="flag")
+						select
+							option.en English
+							option.vn Vietnamese
+	section.main-header
+		.container
+			.main-header-wrapper
+				.logo-wrapper
+					img(src="./img/logo.png", alt="logo")
+				.main-header-menu
+					ul.menu-parent
+						li
+							a(href="javascript:void(0)") About Us
+						li
+							a(href="javascript:void(0)") Service
+						li
+							a(href="javascript:void(0)") Product
+							ul.menu-sub
+								li
+									a(href="javascript:void(0)") Lights
+								li
+									a(href="javascript:void(0)") Electrical
+								li
+									a(href="javascript:void(0)") Wooden Furniture
+								li
+									a(href="javascript:void(0)") Decor
+						li
+							a(href="javascript:void(0)") Promotion
+						li
+							a(href="javascript:void(0)") Project
+						li
+							a(href="javascript:void(0)") Catalogue
+						li
+							a(href="javascript:void(0)") Career
+						li
+							a(href="javascript:void(0)") Contact Us
+					.search-wrapper
+						i.mdi.mdi-magnify
+						.search-box
+							input(type="text", placeholder="Tìm kiếm thông tin")
+							button
+								span.mdi.mdi-magnify
+	.backdrop
+	.container
+		.mobile-header
+			ul#mobile-menu
+			.toggle-menu
+				span
+				span
+				span
