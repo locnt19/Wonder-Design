@@ -89,7 +89,14 @@ $(document).ready(function () {
 			}).watch()
 		}
 	}
-
+	var moveNavBarTopList = new MappingListener({
+		selector: '.contact-info',
+		mobileWrapper: '.menu-parent',
+		mobileMethod: 'appendTo',
+		desktopWrapper: '.top-header-menu',
+		desktopMethod: 'prependTo',
+		breakpoint: 768,
+	}).watch()
 
 	const ProjectPhotoSwiper = new Swiper('.project-detail-photo .swiper-container', {
 		slidesPerView: 1,
