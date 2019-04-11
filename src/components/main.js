@@ -94,3 +94,11 @@ var lastedNews = new Swiper('.lasted-news .swiper-container', {
 		}
 	}
 });
+
+var Banner = new Swiper('.wd-banner .swiper-container', {
+	slidesPerView: 1,
+	autoplay: {
+		delay: 2000
+	},
+	loop: true
+})

@@ -1,0 +1,59 @@
+.wd-services
+	padding-top: 0
+	h2 
+		font-size: 35px
+		line-height: 55px
+		font-weight: 400
+		color: #333333
+		text-transform: uppercase
+	.services-item
+		background: #e6eae9
+		display: flex
+		justify-content: center
+		flex-direction: column
+		.img 
+			img 
+				width: 100%
+		.full-conten 
+			padding: 0 15px
+			h2 
+				text-transform: capitalize
+				font-size: 35px
+				line-height: 55px
+				color: #0875bb
+				font-weight: 600
+			h3 
+				font-size: 20px 
+				line-height: 55px
+				color: #999999
+				font-weight: 300
+			p 
+				font-size: 15px
+				line-height: 22px
+				color: #333333
+				font-weight: 400
+		.buttom 
+			margin-left: 15px
+			margin-top: 40px
+			border-width: 1px
+			border-color: rgb(204, 204, 204)
+			border-style: solid
+			width: 198px
+			border-radius: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 38px
+			a 
+				font-size: 15px
+				line-height: 22px
+				color: #999999
+	@media (max-width: 767.98px)
+		.services-item 
+			+ .services-item 
+				padding: 20px 0
+			.full-conten
+				h3 
+					line-height: 30px
+			.buttom 
+				margin-top: 20px
