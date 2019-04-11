@@ -178,6 +178,15 @@ $(document).ready(function () {
 				slidesPerView: 1,
 			}
 		}
+});
+
+var Banner = new Swiper('.wd-banner .swiper-container', {
+	slidesPerView: 1,
+	autoplay: {
+		delay: 2000
+	},
+	loop: true
+})
 	});
 
 	FAQs.toggleItem();
@@ -189,5 +198,3 @@ $(document).ready(function () {
 	Header.moveMainMenu();
 	Header.moveSearchBox();
 	Header.toggleMenu();
-
-});
