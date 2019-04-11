@@ -1,16 +1,22 @@
+	// background: #0875BB;
+	// position: absolute;
+	// top: 70px;
+	// right: -100%;
+	// left: auto;
+	// flex-direction: column;
+	// width: 60px;
+	// z-index: 98;
+	// transform: translateX(0%);
+	// height: 484px;
+	// justify-content: flex-start
 header
 	background: #ffffff
 	height: 70px
 	overflow: hidden
-	z-index: 9999
-	width: 100%
+	z-index: 999
 	@media (min-width: 992px)
 		height: auto
 		overflow: inherit
-	&.fixed
-		top: 0
-		left: 0
-		position: fixed
 .top-header
 	background: #0875bb
 	padding: 0
@@ -32,41 +38,45 @@ header
 	list-style: none
 	display: flex
 	font-size: 14px
-	flex-direction: row
-	width: 0
-	top: 73px
-	transform: translateX(0%)
+	background: #0875BB
+	position: absolute
+	top: 70px
 	right: -100%
 	left: auto
-	height: 31px
-	background: #fff
+	flex-direction: column
+	width: 60px
 	z-index: 99
-	position: fixed
-	padding: 0
-	+tran(1s)
-
-	&.active
-		width: 320px
-		right: 0
-		+tran(1s)
-	@media (min-width: 768px)
-		border: none
-		flex-direction: row
+	transform: translateX(0%)
+	height: 484px
+	justify-content: flex-start
+	transition: all 0.5s
+	&:before
+		content: ""
+		display: inline-block
 		position: absolute
-		display: flex
+		top: 0
+		width: 100%
+		height: 3px
+		background: #8ec443
+	@media (min-width: 992px)
+		&:before
+			display: none
+	&.active
+		right: 0
+		transition: all 0.5s
+	@media (min-width: 768px)
 		height: auto
-		right: auto
-		bottom: auto
-		top: auto
+		flex-direction: row
+		top: 50%
+		position: absolute
 		left: 40%
 		transform: translateX(-50%)
-		width: -webkit-fill-available
+		width: 100%
 		background: #ffffff
 		justify-content: flex-end
-		&.active
-			right: auto
-			width: -webkit-fill-available
 	@media (min-width: 992px)
+		height: auto
+		flex-direction: row
 		justify-content: center
 		transform: translateX(0)
 		width: auto
@@ -76,37 +86,26 @@ header
 	@media (min-width: 1200px)
 		font-size: 14px
 
-	
+	@media (max-width: 992px)
+		flex-flow: wrap
+		flex: 0 0 100%
+		padding: 9px 0
 
 	a
 		color: #fff
-		display: none
 		@media (min-width: 768px)
-			display: inline-block
 			color: #0875bb
 		@media (min-width: 992px)
 			color: #fff
-	i
-		display: flex
-		font-style: normal
-		@media (min-width: 768px)
-			display: none
-	
+
 	li
 		position: relative
-		padding: 0
-		height: 30px
-		width: 30px
-		display: flex
-		justify-content: center
-		align-items: center
-		margin: 0 .5px
-		border-radius: 1px
-		background: linear-gradient(45deg,#0875bb,#8ec443)
+		padding: 0 20px
+
 		&:not(:last-child)
 			&:after
 				content: ""
-				display: none
+				display: block
 				width: 1px
 				height: 100%
 				background: #5ab7f3
@@ -116,7 +115,6 @@ header
 
 		&:nth-child(1)
 			&:after
-				display: none
 				@media (max-width: 352px)
 					display: none
 
@@ -134,7 +132,6 @@ header
 
 		&:nth-child(2)
 			&:after
-				display: none
 				@media (max-width: 500px)
 					display: none
 
@@ -147,21 +144,7 @@ header
 
 					@media (max-width: 576px)
 						content: ""
-		@media (min-width: 768px)
-			padding: 0 20px
-			&:not(:last-child)
-				&:after
-					display: block
-			&:nth-child(1)
-				&:after
-					display: block
-				a
-					display: block
-			&:nth-child(2)
-				&:after
-					display: block
-				a
-					display: block
+
 .language
 	background: #055A91
 	display: inline-flex
@@ -255,6 +238,7 @@ header
 	align-items: center
 	justify-content: space-between
 	@media (min-width: 768px)
+		position: relative
 		height: 70px
 		overflow: hidden
 	@media (min-width: 992px)
@@ -266,12 +250,14 @@ header
 		height: 22.5px
 		position: absolute
 		right: 0
+		// position: relative
 		transform: rotate(0deg)
 		transition: 0.5s ease-in-out
 		cursor: pointer
 		margin-right: 15px
-		top: 35px
-		transform: translateY(-50%)
+		@media (min-width: 768px)
+			position: absolute
+			right: 0
 		@media (min-width: 992px)
 			position: inherit
 		span
@@ -326,13 +312,11 @@ ul.menu-parent
 	&:before
 		content: ""
 		display: inline-block
-		position: fixed
-		top: 70px
-		left: 0
-		width: 0
+		position: absolute
+		top: 0
+		width: 100%
 		height: 3px
-		background: linear-gradient(90deg,#0875bb,#8ec443)
-		+tran(1s)
+		background: linear-gradient(45deg,#0875bb,#8ec443)
 	@media (min-width: 992px)
 		&:before
 			display: none
@@ -348,20 +332,11 @@ ul.menu-parent
 		> a
 			font-size: 15px
 			font-weight: 600
-			color: #0875bb
+			color: #fff
 			line-height: 1.2
 			padding-bottom: 5px
 			display: inline-block
 			width: 100%
-			&:before
-				content: ""
-				display: inline-block
-				position: absolute
-				bottom: 0
-				width: 0%
-				height: 3px
-				background: linear-gradient(90deg,#8ec443,#0875bb)
-				+tran(.5s)
 			@media (min-width: 992px)
 				color: rgb(51, 51, 51)
 				font-weight: 400
@@ -374,15 +349,20 @@ ul.menu-parent
 		&:hover
 			.menu-sub
 				display: block
-				+tran(.5s)
 
 			> a
 				color: #0875bb
 				position: relative
 				font-weight: 600
 				&:before
+					content: ""
+					display: inline-block
+					position: absolute
+					bottom: 0
 					width: 100%
-					+tran(1s)
+					height: 3px
+					background: linear-gradient(90deg,#8ec443,#0875bb)
+
 				@media (min-width: 992px)
 					font-weight: 400
 					display: inline-block
@@ -396,22 +376,18 @@ ul.menu-parent
 			padding: 0 20px
 
 	@media (max-width: 992px)
-		
-		background: #ffffff
-		position: fixed
-		top: 73px
+		display: block
+		background: #0875BB
+		position: absolute
+		top: 70px
 		right: -100%
 		z-index: 99
-		width: 0
-		display: block
-		+tran(1s)
+		width: 260px
+		transition: all 0.5s
 
 		&.active
-			width: 320px
-			right: 0
-			&:before
-				width: 1920px
-				+tran(1s)
+			right: 60px
+			transition: all 0.5s
 
 		> li
 			color: #fff
@@ -421,19 +397,14 @@ ul.menu-parent
 				a
 					color: #8dc444
 
-	@media (max-width: 767.9px)
-		&.active
-			top: 104px
-			width: 320px
-			right: 0px
-			+tran(1s)
-
+			.menu-sub
+				display: block
 
 ul.menu-sub
 	display: none
 	padding: 0
 	list-style: none
-	+tran(1s)
+	+tran(.5s)
 
 	li
 		margin: 10px 20px
