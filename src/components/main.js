@@ -43,21 +43,6 @@ const ProjectOtherSwiper = new Swiper('.project-detail-other .swiper-container',
 	}
 });
 
-var lastedNews = new Swiper('.lasted-news .swiper-container', {
-	slidesPerView: 3,
-	loop: true,
-	speed: 1000,
-	spaceBetween: 20,
-	breakpoints: {
-		768: {
-			slidesPerView: 2,
-		},
-		512: {
-			slidesPerView: 1,
-		}
-	}
-})
-
 $(document).ready(function () {
 	FAQs.toggleItem();
 });
@@ -94,7 +79,7 @@ $('.product-tab nav a').on('click', function (e) {
 var lastedNews = new Swiper('.lasted-news .swiper-container', {
 	slidesPerView: 3,
 	loop: true,
-	speed: 1000,
+	speed: 2000,
 	spaceBetween: 30,
 	autoplay: {
 		delay: 3000,
