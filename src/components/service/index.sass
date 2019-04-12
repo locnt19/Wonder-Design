@@ -32,10 +32,11 @@
 					figcaption
 						p
 							color: #0875bb
-							+tran(.5s)
 							font-weight: bold
 				.box-img
 					overflow: hidden
+					max-height: 304px
+					width: 100%
 					img
 						width: 100%
 						transform: scale(1)
@@ -89,30 +90,30 @@
 						color: rgb(51, 51, 51)
 						line-height: 1.467
 						margin-bottom: 40px
-						+tran(.5s)
 						-webkit-line-clamp: 3
 						-webkit-box-orient: vertical
 						display: -webkit-box
 						overflow: hidden
 						text-overflow: ellipsis
-					.btn
-						border: 1px solid rgb(204, 204, 204)
-						font-size: 15px
-						font-family: 'Raleway', sans-serif
-						color: rgb(153, 153, 153)
-						line-height: 15px
-						display: inline-flex
-						padding: 12px 65px
-						border-radius: 50px
-						&:hover
-							background: #0875bb
-							color: #ffffff
-							+tran(.2s)
+					
 			@media (min-width: 768px)
 				flex: 0 0 50%
 				max-width: 50%
 	@media (min-width: 992px)
 		padding-bottom: 40px
+.btn
+	border: 1px solid rgb(204, 204, 204)
+	font-size: 15px
+	font-family: 'Raleway', sans-serif
+	color: rgb(153, 153, 153)
+	line-height: 15px
+	display: inline-flex
+	padding: 12px 65px
+	border-radius: 50px
+	&:hover
+		background: #0875bb
+		color: #ffffff
+		+tran(.2s)
 .service-detail
 	padding-top: 35px
 	padding-bottom: 40px

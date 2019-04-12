@@ -21,7 +21,11 @@ $(document).ready(function () {
 			})
 		}
 	};
-
+	let paginationNav = $('.newspager ul li')
+	paginationNav.on('click', function () {
+		paginationNav.removeClass('active')
+		$(this).toggleClass('active')
+	})
 	const Header = {
 		toggleSearchBox: function () {
 			let searchIcon = $('.search-wrapper i')
@@ -230,14 +234,10 @@ $(document).ready(function () {
 		autoplay: {
 			delay: 2000
 		},
-		loop: true
-	})
-		var Banner = new Swiper('.wd-banner .swiper-container', {
-			slidesPerView: 1,
-			autoplay: {
-				delay: 2000
-			},
-			loop: true
+		loop: true,
+		pagination: {
+			el: '.wd-banner .swiper-pagination',
+		},
 	})
 	FAQs.toggleItem();
 	Header.toggleSearchBox();
