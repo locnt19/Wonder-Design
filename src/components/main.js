@@ -106,7 +106,8 @@ $(document).ready(function () {
 				breakpoint: 992,
 			}).watch()
 		}
-	}
+	};
+
 	var moveNavBarTopList = new MappingListener({
 		selector: '.contact-info',
 		mobileWrapper: '.mobile-header',
@@ -129,7 +130,7 @@ $(document).ready(function () {
 			prevEl: '.project-detail-photo .mdi-arrow-left',
 			nextEl: '.project-detail-photo .mdi-arrow-right'
 		}
-	});
+	})
 
 	const ProjectOtherSwiper = new Swiper('.project-detail-other .swiper-container', {
 		slidesPerView: 3,
@@ -149,7 +150,7 @@ $(document).ready(function () {
 				slidesPerView: 1
 			}
 		}
-	});
+	})
 	
 	// product-detail
 	var productThumbnail = new Swiper('.product-image .thumbnail', {
@@ -196,7 +197,7 @@ $(document).ready(function () {
 				slidesPerView: 1,
 			}
 		}
-});
+	})
 
 	var productOther = new Swiper('.wd-donors .swiper-container', {
 		slidesPerView: 6,
@@ -224,20 +225,19 @@ $(document).ready(function () {
 		}
 	})
 
-var Banner = new Swiper('.wd-banner .swiper-container', {
-	slidesPerView: 1,
-	autoplay: {
-		delay: 2000
-	},
-	loop: true
-})
-	});
 	var Banner = new Swiper('.wd-banner .swiper-container', {
 		slidesPerView: 1,
 		autoplay: {
 			delay: 2000
 		},
 		loop: true
+	})
+		var Banner = new Swiper('.wd-banner .swiper-container', {
+			slidesPerView: 1,
+			autoplay: {
+				delay: 2000
+			},
+			loop: true
 	})
 	FAQs.toggleItem();
 	Header.toggleSearchBox();
@@ -248,5 +248,6 @@ var Banner = new Swiper('.wd-banner .swiper-container', {
 	Header.moveMainMenu();
 	Header.moveSearchBox();
 	Header.toggleMenu();
+});
 
 
