@@ -350,6 +350,7 @@ header
 .main-header-menu
 	display: flex
 	align-items: center
+	z-index: 99
 
 ul.menu-parent
 	padding: 0
@@ -379,7 +380,7 @@ ul.menu-parent
 					+box-shadow
 
 		> a
-			font-size: 15px
+			font-size: 13px
 			font-weight: 600
 			color: #000
 			line-height: 1.2
@@ -401,7 +402,7 @@ ul.menu-parent
 				font-weight: 400
 				width: auto
 				padding-bottom: 0
-				font-size: 13px
+				font-size: 11px
 			@media (min-width: 1200px)
 				font-size: 15px
 
@@ -466,11 +467,14 @@ ul.menu-sub
 	padding: 0
 	list-style: none
 	+tran(1s)
-
 	li
 		margin: 10px 20px
 		a
 			color: #000
+			@media (min-width: 768px)
+				font-size: 13px
+			@media (min-width: 1200px)
+				font-size: 15px
 			&:after
 				position: absolute
 				content: ""
@@ -485,7 +489,7 @@ ul.menu-sub
 				font-weight: 700
 				+tran(.5s)
 				&:after
-					width: 80%
+					width: 70%
 					+tran(1s)
 
 	@media (min-width: 992px)
@@ -498,7 +502,7 @@ ul.menu-sub
 		margin-top: 10px
 		z-index: 99
 		width: 200px
-
+	
 		&:before
 			content: ""
 			position: absolute
@@ -510,7 +514,8 @@ ul.menu-sub
 			border-style: solid
 			border-width: 0 10px 10px 10px
 			border-color: transparent transparent #fff transparent
-
+	@media (min-width: 1200px)
+		width: 254px
 
 		a
 			white-space: nowrap
