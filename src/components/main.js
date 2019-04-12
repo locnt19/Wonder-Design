@@ -1,5 +1,17 @@
 
 $(document).ready(function () {
+	if ($(window).scrollTop() > 0) {
+		$('header').addClass('fixed')
+	} else {
+		$('header').removeClass('fixed')
+	}
+	$(window).on('scroll', function () {
+		if ($(window).scrollTop() > 0) {
+			$('header').addClass('fixed')
+		} else {
+			$('header').removeClass('fixed')
+		}
+	})
 	const FAQs = {
 		toggleItem: function () {
 			let tabsItem = $('.FAQs .FAQs-item')
@@ -21,9 +33,15 @@ $(document).ready(function () {
 		toggleMenu: function () {
 			let toggleMenu = $('header .toggle-menu')
 			let menuParent = $('header .menu-parent')
+			let contactinfo = $('header .contact-info')
+			let backdrop = $('header .backdrop')
+			let overflowHidden = $('html')
 			toggleMenu.on('click', function () {
 				toggleMenu.toggleClass('open')
 				menuParent.toggleClass('active')
+				contactinfo.toggleClass('active')
+				backdrop.toggleClass('active')
+				overflowHidden.toggleClass('active')
 			})
 		},
 		moveContactInfo: function () {
@@ -91,7 +109,7 @@ $(document).ready(function () {
 	}
 	var moveNavBarTopList = new MappingListener({
 		selector: '.contact-info',
-		mobileWrapper: '.menu-parent',
+		mobileWrapper: '.mobile-header',
 		mobileMethod: 'appendTo',
 		desktopWrapper: '.top-header-menu',
 		desktopMethod: 'prependTo',
@@ -178,7 +196,6 @@ $(document).ready(function () {
 				slidesPerView: 1,
 			}
 		}
-	
 });
 
 	var productOther = new Swiper('.wd-donors .swiper-container', {
@@ -215,7 +232,13 @@ var Banner = new Swiper('.wd-banner .swiper-container', {
 	loop: true
 })
 	});
-
+	var Banner = new Swiper('.wd-banner .swiper-container', {
+		slidesPerView: 1,
+		autoplay: {
+			delay: 2000
+		},
+		loop: true
+	})
 	FAQs.toggleItem();
 	Header.toggleSearchBox();
 	Header.moveContactInfo();
@@ -225,3 +248,5 @@ var Banner = new Swiper('.wd-banner .swiper-container', {
 	Header.moveMainMenu();
 	Header.moveSearchBox();
 	Header.toggleMenu();
+
+

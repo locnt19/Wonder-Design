@@ -1,5 +1,31 @@
 header
 	background: #ffffff
+	height: 70px
+	overflow: hidden
+	z-index: 9999
+	width: 100%
+	@media (min-width: 992px)
+		height: auto
+		overflow: inherit
+	&.fixed
+		top: 0
+		left: 0
+		position: fixed
+	.backdrop
+		display: none
+	@media (max-width: 991.9px)
+		.backdrop
+			z-index: 99
+			display: none
+			position: fixed
+			top: 73px
+			right: 0
+			width: 0
+			height: 100%
+			background: rgba(0,0,0,.8)
+			&.active
+				width: 100%
+				display: block
 .top-header
 	background: #0875bb
 	padding: 0
@@ -21,19 +47,40 @@ header
 	list-style: none
 	display: flex
 	font-size: 14px
-	position: absolute
-	left: 40%
-	transform: translateX(-50%)
-	width: 100%
-	background: #ffffff
-	justify-content: flex-end
+	flex-direction: row
+	width: 0
+	top: 73px
+	transform: translateX(0%)
+	right: -100%
+	left: auto
+	height: 31px
+	background: #fff
+	z-index: 99
+	position: fixed
+	padding: 0
+	+tran(1s)
+
+	&.active
+		width: 320px
+		right: 0
+		+tran(1s)
 	@media (min-width: 768px)
+		border: none
+		flex-direction: row
 		position: absolute
+		display: flex
+		height: auto
+		right: auto
+		bottom: auto
+		top: auto
 		left: 40%
 		transform: translateX(-50%)
-		width: 100%
+		width: -webkit-fill-available
 		background: #ffffff
 		justify-content: flex-end
+		&.active
+			right: auto
+			width: -webkit-fill-available
 	@media (min-width: 992px)
 		justify-content: center
 		transform: translateX(0)
@@ -44,27 +91,37 @@ header
 	@media (min-width: 1200px)
 		font-size: 14px
 
-	@media (max-width: 992px)
-		flex-flow: wrap
-		flex: 0 0 100%
-		padding: 9px 0
-		background: #fff
+	
 
 	a
 		color: #fff
+		display: none
 		@media (min-width: 768px)
+			display: inline-block
 			color: #0875bb
 		@media (min-width: 992px)
 			color: #fff
-
+	i
+		display: flex
+		font-style: normal
+		@media (min-width: 768px)
+			display: none
+	
 	li
 		position: relative
-		padding: 0 20px
-
+		padding: 0
+		height: 30px
+		width: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 .5px
+		border-radius: 1px
+		background: linear-gradient(45deg,#0875bb,#8ec443)
 		&:not(:last-child)
 			&:after
 				content: ""
-				display: block
+				display: none
 				width: 1px
 				height: 100%
 				background: #5ab7f3
@@ -74,6 +131,7 @@ header
 
 		&:nth-child(1)
 			&:after
+				display: none
 				@media (max-width: 352px)
 					display: none
 
@@ -91,6 +149,7 @@ header
 
 		&:nth-child(2)
 			&:after
+				display: none
 				@media (max-width: 500px)
 					display: none
 
@@ -103,7 +162,21 @@ header
 
 					@media (max-width: 576px)
 						content: ""
-
+		@media (min-width: 768px)
+			padding: 0 20px
+			&:not(:last-child)
+				&:after
+					display: block
+			&:nth-child(1)
+				&:after
+					display: block
+				a
+					display: block
+			&:nth-child(2)
+				&:after
+					display: block
+				a
+					display: block
 .language
 	background: #055A91
 	display: inline-flex
@@ -161,19 +234,19 @@ header
 .logo-wrapper
 	margin-right: auto
 	z-index: 99
-	width: 160px
-	border: none
-	border-radius: 50% 50% 0 0
+	width: 100px
 	overflow: auto
 	background: #fff
 	position: relative
-	margin-top: -40px
+	margin-top: 0
 	padding: 10px
 	@media (min-width: 768px)
 		margin-top: 0
 		padding: 0
 		width: 100px
 	@media (min-width: 992px)
+		border: none
+		border-radius: 50% 50% 0 0
 		overflow: hidden
 		padding: 10px 0
 		margin-left: 0
@@ -187,8 +260,8 @@ header
 		display: block
 		margin: 0 auto
 		@media (min-width: 768px)
-		@media (min-width: 992px)
 			width: 80%
+		@media (min-width: 992px)
 
 .mobile-header
 	background: #fff
@@ -206,14 +279,14 @@ header
 	.toggle-menu
 		width: 30px
 		height: 22.5px
-		position: relative
+		position: absolute
+		right: 0
 		transform: rotate(0deg)
 		transition: 0.5s ease-in-out
 		cursor: pointer
 		margin-right: 15px
-		@media (min-width: 768px)
-			position: absolute
-			right: 0
+		top: 35px
+		transform: translateY(-50%)
 		@media (min-width: 992px)
 			position: inherit
 		span
@@ -221,7 +294,7 @@ header
 			position: absolute
 			height: 3px
 			width: 100%
-			background: #0875BB
+			background: linear-gradient(120deg,#0875bb,#8ec443)
 			border-radius: 9px
 			opacity: 1
 			left: 0
@@ -264,19 +337,51 @@ ul.menu-parent
 	padding: 0
 	display: flex
 	list-style: none
+	position: relative
+	&:before
+		content: ""
+		display: inline-block
+		position: fixed
+		top: 70px
+		left: 0
+		width: 0
+		height: 3px
+		background: linear-gradient(90deg,#0875bb,#8ec443)
+		+tran(1s)
+	@media (min-width: 992px)
+		&:before
+			display: none
+
 
 	> li
 		position: relative
-		&:hover
-			ul.menu-sub
-				+box-shadow
+		@media (min-width: 992px)
+			&:hover
+				ul.menu-sub
+					+box-shadow
 
 		> a
 			font-size: 15px
-			font-weight: 400
-			color: rgb(51, 51, 51)
-			line-height: 1
+			font-weight: 600
+			color: #0875bb
+			line-height: 1.2
+			padding-bottom: 5px
+			display: inline-block
+			width: 100%
+			&:before
+				content: ""
+				display: inline-block
+				position: absolute
+				bottom: 0
+				width: 0%
+				height: 3px
+				background: linear-gradient(90deg,#8ec443,#0875bb)
+				+tran(.5s)
 			@media (min-width: 992px)
+				color: rgb(51, 51, 51)
+				font-weight: 400
+				width: auto
+				padding-bottom: 0
 				font-size: 13px
 			@media (min-width: 1200px)
 				font-size: 15px
@@ -284,36 +389,44 @@ ul.menu-parent
 		&:hover
 			.menu-sub
 				display: block
+				+tran(.5s)
 
 			> a
 				color: #0875bb
-				box-shadow: 0 1px 0 0 rgb(8, 117, 187)
-
-				@media (max-width: 992px)
-					box-shadow: none
-
-					&:after
-						content: ""
-						display: block
-						width: 100%
-						height: 2px
-						background-image: linear-gradient(90deg, #0875bb 0, #8dc444)
+				position: relative
+				font-weight: 600
+				&:before
+					width: 100%
+					+tran(1s)
+				@media (min-width: 992px)
+					font-weight: 400
+					display: inline-block
+					width: auto
+					padding-bottom: 0
+					box-shadow: 0 1px 0 0 rgb(8, 117, 187)
+					&:before
+						display: none
 
 		@media (min-width: 992px)
 			padding: 0 20px
 
 	@media (max-width: 992px)
-		display: block
-		background: #0875BB
-		position: absolute
-		top: 70px
+		
+		background: #ffffff
+		position: fixed
+		top: 73px
 		right: -100%
 		z-index: 99
-		width: 320px
-		transition: all 0.5s
+		width: 0
+		display: block
+		+tran(1s)
 
 		&.active
+			width: 320px
 			right: 0
+			&:before
+				width: 1920px
+				+tran(1s)
 
 		> li
 			color: #fff
@@ -323,26 +436,19 @@ ul.menu-parent
 				a
 					color: #8dc444
 
-			.menu-sub
-				display: block
+	@media (max-width: 767.9px)
+		&.active
+			top: 104px
+			width: 320px
+			right: 0px
+			+tran(1s)
 
-	@media (max-width: 768px)
-		top: 152px
-
-	@media (max-width: 576px)
-		top: 134px
-
-	@media (max-width: 500px)
-		top: 156px
-
-	@media (max-width: 353px)
-		top: 174px
 
 ul.menu-sub
 	display: none
 	padding: 0
 	list-style: none
-	+tran(.5s)
+	+tran(1s)
 
 	li
 		margin: 10px 20px
