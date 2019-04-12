@@ -54,7 +54,7 @@
 						padding-left: 40px
 						padding-right: 40px
 					h3
-						font-size: 35px
+						font-size: 20px
 						font-family: 'Raleway', sans-serif
 						color: rgb(8, 117, 187)
 						font-weight: 700
@@ -63,6 +63,12 @@
 						padding-bottom: 15px
 						position: relative
 						text-align: left
+						@media (min-width: 576px)
+							font-size: 24px
+						@media (min-width: 768px)
+							font-size: 28px
+						@media (min-width: 992px)
+							font-size: 35px
 						&:before
 							content: ""
 							display: inline-block
@@ -75,16 +81,23 @@
 					span
 						text-align: left
 						display: inline-block
-						font-size: 20px
+						font-size: 16px
 						font-family: 'Raleway', sans-serif
 						color: rgb(153, 153, 153)
 						line-height: 20px
-						padding-top: 30px
+						padding-top: 10px
 						width: 100%
 						padding-bottom: 20px
+						@media (min-width: 576px)
+							font-size: 18px
+						@media (min-width: 768px)
+							font-size: 19px
+						@media (min-width: 992px)
+							padding-top: 30px
+							font-size: 20px
 					p
 						text-align: left
-						font-size: 15px
+						font-size: 13px
 						font-weight: 400
 						font-family: 'Raleway', sans-serif
 						color: rgb(51, 51, 51)
@@ -95,7 +108,8 @@
 						display: -webkit-box
 						overflow: hidden
 						text-overflow: ellipsis
-					
+						@media (min-width: 992px)
+							font-size: 15px
 			@media (min-width: 768px)
 				flex: 0 0 50%
 				max-width: 50%
@@ -118,7 +132,7 @@
 	padding-top: 35px
 	padding-bottom: 40px
 	h2
-		font-size: 35px
+		font-size: 20px
 		font-family: 'Raleway', sans-serif
 		color: rgb(51, 51, 51)
 		font-weight: bold
@@ -127,12 +141,20 @@
 		text-align: center
 		padding-bottom: 10px
 		font-weight: 400
+		@media (min-width: 576px)
+			font-size: 24px
+		@media (min-width: 768px)
+			font-size: 28px
+		@media (min-width: 992px)
+			font-size: 35px
 	p
-		font-size: 18px
+		font-size: 14px
 		font-family: 'Raleway', sans-serif
 		color: rgb(153, 153, 153)
 		line-height: 1.444
 		text-align: center
+		@media (min-width: 768px)
+			font-size: 18px
 	.content, .content-reverse
 		.box-img
 			padding: 0 10px
@@ -143,13 +165,18 @@
 			padding-top: 35px
 
 			h3
-				font-size: 30px
+				font-size: 20px
 				font-family: 'Raleway', sans-serif
 				color: rgb(8, 117, 187)
 				font-weight: bold
-				line-height: 30px
 				padding-bottom: 15px
 				position: relative
+				@media (min-width: 576px)
+					font-size: 24px
+				@media (min-width: 768px)
+					font-size: 28px
+				@media (min-width: 992px)
+					font-size: 30px
 				&:before
 					content: ""
 					display: inline-block
@@ -164,13 +191,15 @@
 				padding-bottom: 30px
 				span
 					display: inline-block
-					font-size: 15px
+					font-size: 13px
 					font-family: 'Raleway', sans-serif
 					color: rgb(51, 51, 51)
 					line-height: 1.467
 					padding-bottom: 15px
 					text-align: justify
 					width: 100%
+					@media (min-width: 768px)
+						font-size: 15px
 	@media (min-width: 768px)
 		padding-top: 65px
 		padding-bottom: 85px
