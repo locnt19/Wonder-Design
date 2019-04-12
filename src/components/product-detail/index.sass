@@ -57,32 +57,39 @@
 							color: #333333
 							border-bottom: 2px solid #000
 		.button 
-			border-width: 1px
-			border-color: rgb(8, 117, 187)
-			border-style: solid
-			width: 252px
-			border-radius: 50px
-			height: 48px
-			display: flex
-			justify-content: center
-			align-items: center
-			transition: .5s all ease-in-out
 			a 
+				border-width: 1px
+				border-color: rgb(8, 117, 187)
+				border-style: solid
+				width: 252px
+				border-radius: 50px
+				height: 48px
+				display: flex
+				justify-content: center
+				align-items: center
+				transition: .5s all ease-in-out
 				transition: .5s all ease-in-out
 				font-size: 15px
 				line-height: 22px
 				font-weight: 600
 				color: #0875bb
 				text-transform: uppercase
-			&:hover 
-				background: #0875bb
-				a 
+				&:hover 
+					background: #0875bb
 					color: #ffffff
 	@media (max-width: 768px)
 		padding: 30px 0
 		.product-detail-item
 			.product-tab 
 				padding: 20px 0
+			.product-info 
+				h2 
+					font-size: 30px
+	@media (max-width: 575.98px)
+		.product-detail-item
+			.product-info 
+				h2 
+					font-size: 25px
 .tables 
 	h2 
 		font-size: 35px
@@ -93,9 +100,31 @@
 	.container 
 		padding-top: 70px
 		border-top: 1px solid #d7d7d7
+	.project-item 
+		figure
+			.box-img
+				max-height: 255px
+			figcaption 
+				p 
+					color: #be0707
+	@media (max-width: 991.98px)
+		.project-item 
+			+ .project-item 
+				+ .project-item 
+					margin-top: 30px
 	@media (max-width: 768px)
+		h2 
+			font-size: 30px
 		.container 
 			padding-top: 30px
+	@media (max-width: 575.98px)
+		h2 
+			font-size: 25px
+		.project-item 
+			+ .project-item 
+				margin-top: 15px
+				+ .project-item 
+					margin-top: 15px
 .other 
 	padding: 70px 0 
 	h2 
@@ -104,5 +133,26 @@
 		font-weight: 400
 		color: #333333
 		text-transform: uppercase
+	.project-item 
+		figure
+			.box-img
+				max-height: 255px
+			figcaption 
+				p 
+					color: #be0707
+	@media (max-width: 991.98px)
+		.project-item 
+			+ .project-item 
+				+ .project-item 
+					margin-top: 30px
 	@media (max-width: 768px)
-		padding: 30px
+		h2 
+			font-size: 30px
+	@media (max-width: 575.98px)
+		h2 
+			font-size: 25px
+		.project-item 
+			+ .project-item 
+				margin-top: 15px
+				+ .project-item 
+					margin-top: 15px

@@ -35,26 +35,38 @@
 		.buttom 
 			margin-left: 15px
 			margin-top: 40px
-			border-width: 1px
-			border-color: rgb(204, 204, 204)
-			border-style: solid
-			width: 198px
-			border-radius: 50px
-			display: flex
-			justify-content: center
-			align-items: center
-			height: 38px
-			a 
+			a
+				border-width: 1px
+				border-color: rgb(204, 204, 204)
+				border-style: solid
+				width: 198px
+				border-radius: 50px
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 38px 
 				font-size: 15px
 				line-height: 22px
 				color: #999999
 	@media (max-width: 767.98px)
 		padding-top: 15px
+		h2 
+			font-size: 30px
 		.Construction-item 
-			+ .Construction-item 
+			&:first-child
 				padding: 20px 0
 			.full-conten
+				h2 
+					font-size: 30px
 				h3 
+					font-size: 18px
 					line-height: 30px
 			.buttom 
 				margin-top: 20px
+	@media (max-width: 575.98px)
+		h2 
+			font-size: 25px
+		.Construction-item 
+			.full-conten
+				h2 
+					font-size: 25px
