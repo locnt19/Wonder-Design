@@ -26,6 +26,11 @@ $(document).ready(function () {
 		paginationNav.removeClass('active')
 		$(this).toggleClass('active')
 	})
+	let faqsNav = $('.product .FAQs-nav ul li')
+	faqsNav.on('click', function () {
+		faqsNav.removeClass('active')
+		$(this).toggleClass('active')
+	})
 	const Header = {
 		toggleSearchBox: function () {
 			let searchIcon = $('.search-wrapper i')
@@ -161,7 +166,12 @@ $(document).ready(function () {
 		slidesPerView: 4,
 		speed: 1200,
 		loop: true,
-		slideToClickedSlide: true
+		spaceBetween: 10,
+		slideToClickedSlide: true,
+		navigation: {
+			prevEl: '.product-image .mdi-arrow-left',
+			nextEl: '.product-image .mdi-arrow-right'
+		}
 	})
 	productThumbnail.on('click', function () {
 		var target = $('.product-image .thumbnail .swiper-slide-active').attr('data-target')

@@ -46,7 +46,7 @@
 			@media (max-width: 320px)
 				width: 100px
 .project-item
-	height: 100%
+	height: auto
 	figure
 		height: 100%
 		overflow: hidden
@@ -69,7 +69,6 @@
 		img
 			width: 100%
 			height: 100%
-			// object-fit: cover
 			+tran(.2s)
 	figcaption
 		height: 100%
@@ -102,3 +101,5 @@
 			font-size: 16px
 		@media (max-width: 576px)
 			font-size: 14px
+.project-item:not(.swiper-slide)
+	height: 100%
