@@ -21,7 +21,7 @@
 			padding-top: 15px
 			padding-bottom: 15px
 			.project-item
-				
+				height: 100%
 				figure
 					height: 100%
 					background: #ffffff
@@ -58,6 +58,12 @@
 							font-family: 'Raleway', sans-serif
 							line-height: 1.444
 							+tran(.5s)
+							color: #0875bb
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							text-overflow: ellipsis
+							overflow: hidden
+							display: -webkit-box
 							@media (min-width: 768px)
 								font-size: 18px
 	@media (min-width: 576px)

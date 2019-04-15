@@ -22,11 +22,18 @@
 					max-height: 197px
 				figcaption
 					padding-bottom: 40px
+					h4
+						+line(2)
+						text-transform: capitalize
 					p
 						padding-top: 20px
 						line-height: 1.467
-						-webkit-line-clamp: 3
-						-webkit-box-orient: vertical
-						text-overflow: ellipsis
-						overflow: hidden
-						display: -webkit-box
+						+line(2)
+					date
+						font-size: 12px
+						color: rgb(213, 213, 213)
+						line-height: 1.857
+						margin-bottom: 5px
+						display: inline-block
+						@media (min-width: 768px)
+							font-size: 14px

@@ -26,6 +26,11 @@ $(document).ready(function () {
 		paginationNav.removeClass('active')
 		$(this).toggleClass('active')
 	})
+	let faqsNav = $('.product .FAQs-nav ul li')
+	faqsNav.on('click', function () {
+		faqsNav.removeClass('active')
+		$(this).toggleClass('active')
+	})
 	const Header = {
 		toggleSearchBox: function () {
 			let searchIcon = $('.search-wrapper i')
