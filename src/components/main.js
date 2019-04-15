@@ -157,11 +157,15 @@ $(document).ready(function () {
 	})
 	
 	// product-detail
-	var productThumbnail = new Swiper('.product-image .thumbnail', {
+	var productThumbnail = new Swiper('.product-detail .product-image .thumbnail', {
 		slidesPerView: 4,
 		speed: 1200,
 		loop: true,
-		slideToClickedSlide: true
+		slideToClickedSlide: true,
+		navigation: {
+			prevEl: '.product-detail .mdi-chevron-left',
+			nextEl: '.product-detail .mdi-chevron-right'
+		}
 	})
 	productThumbnail.on('click', function () {
 		var target = $('.product-image .thumbnail .swiper-slide-active').attr('data-target')
