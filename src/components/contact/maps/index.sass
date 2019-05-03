@@ -96,6 +96,16 @@
 	input,
 	select
 		border-radius: 99px
+		appearance: none
+		position: relative
+		&:before
+			content: "\f35d"
+			font-family: "Material Design Icons"
+			font-weight: 400
+			position: absolute
+			right: 20px
+			top: 50%
+			transform: translateY(-50%)
 	textarea
 		border-radius: 5px
 		height: 120px
@@ -116,6 +126,7 @@
 			border: none
 			box-shadow: none
 		select
+			appearance: none
 			flex: 0 0 100px
 			padding-right: 0
 			background: #e1e1e1
